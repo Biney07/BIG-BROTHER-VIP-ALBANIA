@@ -1,0 +1,124 @@
+/* Navbar.css */
+
+/*---Google font---*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*---Bases---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*---Navbar---*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: transparent;
+    transition: background-color 0.3s, height 0.3s;
+    z-index: 999;
+}
+
+.navbar.scrolled {
+    background-color: #be0707;
+    /* Update with desired color */
+    height: 70px;
+    /* Update with desired height */
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    /* Update with desired color */
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: #ff9595;
+    font-weight: 600;
+}
+
+.navbar a {
+    color: white;
+    /* Update with desired color */
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    color: white;
+    /* Update with desired color */
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .navbar {
+        padding: 0;
+        height: 60px;
+        /* Update with desired height */
+    }
+
+    .navbar .logo {
+        display: none;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        top: 0;
+        left: -100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(8px);
+        width: 100%;
+        height: 100vh;
+        transition: left 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        left: 0;    
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+}
