@@ -10,9 +10,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
+
 
 ul {
     list-style: none;
@@ -39,16 +37,14 @@ a {
 }
 
 .navbar.scrolled {
-    background-color: #be0707;
+    background-color: #414141;
     /* Update with desired color */
     height: 70px;
     /* Update with desired height */
 }
 
 .navbar .logo {
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
+    width: 170px;
     /* Update with desired color */
 }
 
@@ -61,7 +57,7 @@ a {
 }
 
 .navbar .nav-links ul li.active a {
-    color: #ff9595;
+    color: #dabb3f;
     font-weight: 600;
 }
 
@@ -108,7 +104,7 @@ a {
     }
 
     .nav-links.mobile-menu {
-        left: 0;    
+        left: 0;
     }
 
     .nav-links ul {
@@ -118,7 +114,12 @@ a {
     }
 
     .navbar .nav-links ul li {
-        margin: 25px 0;
-        font-size: 1.2em;
+        margin: 22px 0;
+        font-size: 1.5em;
     }
+}
+.link{
+    margin: 22px 20px;
+    font-size: 1.3em;
+    color: #dabb3f;
 }
