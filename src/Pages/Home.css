@@ -1,246 +1,255 @@
+@font-face {
+  font-family: 'TomkinThin';
+  src: url('../Images/Tomkin-Thin.ttf') format('truetype');
+}
+
+.inline-block {
+
+  font-family: 'TomkinThin', sans-serif;
+}
+
 .header {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+ 
 }
 
 .header video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
 video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 div#fashion {
-    margin-top: 130px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin-top: 130px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
 h2 {
-    font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
-    font-size: 8vmin;
-    text-align: center;
-    margin: 2rem 3rem 0;
+  font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+  font-size: 8vmin;
+  text-align: center;
+  margin: 2rem 3rem 0;
 
-    color: #fff;
-    font-weight: 100;
+  color: #fff;
+  font-weight: 100;
 }
 
 .big-bold-text {
-    font-size: 34px;
-    font-weight: bolder;
-    color: white;
-    mix-blend-mode: overlay;
+  font-size: 34px;
+  font-weight: bolder;
+  color: white;
+  mix-blend-mode: overlay;
 }
 
 .logo-container {
-    position: relative;
-    display: inline-block;
-    margin-top: 180px;
+  position: relative;
+  display: inline-block;
+  margin-top: 180px;
 }
 
 .logo-image {
-    display: block;
-    width: 200px;
-    /* Adjust the width as per your logo size */
-    height: auto;
+  display: block;
+  width: 200px;
+  /* Adjust the width as per your logo size */
+  height: auto;
 }
 
 .sparkle-effect {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../Images/spark.png') repeat;
-    animation: sparkle 2s linear infinite;
-    pointer-events: none;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../Images/spark.png') repeat;
+  animation: sparkle 2s linear infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 @keyframes sparkle {
-    0% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
 
-    100% {
-        background-position: 200% 200%;
-    }
+  100% {
+    background-position: 200% 200%;
+  }
 }
+
 @font-face {
-    font-family: "Mona Sans";
-    src: url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2 supports variations"),
-      url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2-variations");
-    font-weight: 100 1000;
-  }
-  
-  .container {
-    --card-color: hsl(260deg 100% 3%);
-    --text-color: hsl(260deg 10% 55%);
-    --card-radius: 3.6vw;
-    --card-width: 35vw;
-    --border-width: 3px;
-    --bg-size: 1;
-  
-    --hue: 0;
-    --hue-speed: 1;
-  
-    --rotate: 0;
-    --animation-speed: 4s;
-  
-    --interaction-speed: 0.55s;
-    --glow-scale: 1.5;
-    --scale-factor: 1;
-    --glow-blur: 6;
-    --glow-opacity: 1;
-    --glow-radius: 100;
-    --glow-rotate-unit: 1deg;
-  }
-  
-  .container::before,
-  .container::after {
-    content: "CSS.registerProperty is supported ✅";
-    position: absolute;
-    display: block;
-    top: 8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: calc(100% - 160px);
-    max-width: 380px;
-    height: auto;
-    padding: 8px;
-    border-radius: 8px;
-    background: hsl(114deg 51% 48%);
-    color: white;
-    text-align: center;
-    font-family: sans-serif;
-    z-index: var(--supported, 0);
-    opacity: var(--supported, 0);
-  }
-  
-  .container::after {
-    content: "CSS.registerProperty is NOT supported ❌";
-    background: hsl(0deg 51% 48%);
-    z-index: var(--not-supported, 0);
-    opacity: var(--not-supported, 0);
-  }
-  
-  .container::before,
-  .container::after {
-    display: none !important;
-  }
-  
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Mona Sans", sans-serif;
-  }
-  
-  .card {
-    width: var(--card-width);
-    width: min(480px, var(--card-width));
-    aspect-ratio: 1.5/1;
-    color: white;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-    border-radius: var(--card-radius);
-    cursor: pointer;
-  }
-  
-  .card:hover > div {
-    mix-blend-mode: darken;
-    --text-color: white;
+  font-family: "Mona Sans";
+  src: url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("https://assets.codepen.io/64/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+}
+
+.container {
+  --card-color: hsl(260deg 100% 3%);
+  --text-color: hsl(260deg 10% 55%);
+  --card-radius: 3.6vw;
+  --card-width: 35vw;
+  --border-width: 3px;
+  --bg-size: 1;
+
+  --hue: 0;
+  --hue-speed: 1;
+
+  --rotate: 0;
+  --animation-speed: 4s;
+
+  --interaction-speed: 0.55s;
+  --glow-scale: 1.5;
+  --scale-factor: 1;
+  --glow-blur: 6;
+  --glow-opacity: 1;
+  --glow-radius: 100;
+  --glow-rotate-unit: 1deg;
+}
+
+.container::before,
+.container::after {
+  content: "CSS.registerProperty is supported ✅";
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 160px);
+  max-width: 380px;
+  height: auto;
+  padding: 8px;
+  border-radius: 8px;
+  background: hsl(114deg 51% 48%);
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: var(--supported, 0);
+  opacity: var(--supported, 0);
+}
+
+.container::after {
+  content: "CSS.registerProperty is NOT supported ❌";
+  background: hsl(0deg 51% 48%);
+  z-index: var(--not-supported, 0);
+  opacity: var(--not-supported, 0);
+}
+
+.container::before,
+.container::after {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Mona Sans", sans-serif;
+}
+
+.card {
+  width: var(--card-width);
+  width: min(480px, var(--card-width));
+  aspect-ratio: 1.5/1;
+  color: white;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  border-radius: var(--card-radius);
+  cursor: pointer;
+}
+
+.card:hover>div {
+  mix-blend-mode: darken;
+  --text-color: white;
+  box-shadow: 0 0 calc(var(--white-shadow) * 1vw) calc(var(--white-shadow) * 0.15vw) rgb(255 255 255 / 20%);
+  animation: shadow-pulse calc(var(--animation-speed) * 2) linear infinite;
+}
+
+.card:hover>div:before {
+  --bg-size: 15;
+  animation-play-state: paused;
+  transition: --bg-size var(--interaction-speed) ease;
+}
+
+.card:hover .glow {
+  --glow-blur: 1.5;
+  --glow-opacity: .0;
+  --glow-radius: 10;
+  --glow-rotate-unit: 5deg;
+  transition: --glow-blur var(--interaction-speed) ease, --glow-opacity var(--interaction-speed) ease, --glow-radius var(--interaction-speed) ease, --glow-rotate-unit var(--interaction-speed) ease;
+}
+
+.card .glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--card-radius);
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(255, 255, 255, 0) 80%);
+  mix-blend-mode: overlay;
+  opacity: var(--glow-opacity);
+  filter: blur(calc(var(--glow-blur) * 0.25vw));
+  transition: opacity var(--interaction-speed) ease, filter var(--interaction-speed) ease;
+}
+
+.card .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.card .content span {
+  display: block;
+}
+
+.card .content span:first-child {
+  font-size: 0.6em;
+}
+
+.card .content span:last-child {
+  font-size: 0.4em;
+  font-weight: normal;
+}
+
+@keyframes shadow-pulse {
+  0% {
     box-shadow: 0 0 calc(var(--white-shadow) * 1vw) calc(var(--white-shadow) * 0.15vw) rgb(255 255 255 / 20%);
-    animation: shadow-pulse calc(var(--animation-speed) * 2) linear infinite;
   }
-  
-  .card:hover > div:before {
-    --bg-size: 15;
-    animation-play-state: paused;
-    transition: --bg-size var(--interaction-speed) ease;
-  }
-  
-  .card:hover .glow {
-    --glow-blur: 1.5;
-    --glow-opacity: .0;
-    --glow-radius: 10;
-    --glow-rotate-unit: 5deg;
-    transition: --glow-blur var(--interaction-speed) ease, --glow-opacity var(--interaction-speed) ease, --glow-radius var(--interaction-speed) ease, --glow-rotate-unit var(--interaction-speed) ease;
-    }
-    
-    .card .glow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--card-radius);
-    background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.6) 0%,
-    rgba(255, 255, 255, 0) 80%
-    );
-    mix-blend-mode: overlay;
-    opacity: var(--glow-opacity);
-    filter: blur(calc(var(--glow-blur) * 0.25vw));
-    transition: opacity var(--interaction-speed) ease, filter var(--interaction-speed) ease;
-    }
-    
-    .card .content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    font-size: 2.5vw;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: var(--text-color);
-    }
-    
-    .card .content span {
-    display: block;
-    }
-    
-    .card .content span:first-child {
-    font-size: 0.6em;
-    }
-    
-    .card .content span:last-child {
-    font-size: 0.4em;
-    font-weight: normal;
-    }
-    
-    @keyframes shadow-pulse {
-    0% {
-    box-shadow: 0 0 calc(var(--white-shadow) * 1vw) calc(var(--white-shadow) * 0.15vw) rgb(255 255 255 / 20%);
-    }
-    100% {
+
+  100% {
     box-shadow: 0 0 calc(var(--white-shadow) * 1vw) calc(var(--white-shadow) * 0.15vw) rgb(255 255 255 / 20%),
-    0 0 calc(var(--white-shadow) * 1.5vw) calc(var(--white-shadow) * 0.25vw) rgb(255 255 255 / 15%),
-    0 0 calc(var(--white-shadow) * 2vw) calc(var(--white-shadow) * 0.35vw) rgb(255 255 255 / 10%);
-    }
-    }
-  
+      0 0 calc(var(--white-shadow) * 1.5vw) calc(var(--white-shadow) * 0.25vw) rgb(255 255 255 / 15%),
+      0 0 calc(var(--white-shadow) * 2vw) calc(var(--white-shadow) * 0.35vw) rgb(255 255 255 / 10%);
+  }
+}

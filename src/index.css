@@ -1,13 +1,16 @@
 @font-face {
-  font-family: 'SweetDarling';
-  src: url('./Images/font.ttf') format('truetype');
+  font-family: 'Tomkin';
+  src: url('./Images/Tomkin-Regular.ttf') format('truetype');
 }
+
+
+
 
 body {
   margin: 0;
 
-
-  font-family: 'SweetDarling', sans-serif;
+  overflow-x: hidden !important;
+  font-family: 'Tomkin', sans-serif !important;
 
 
   -webkit-font-smoothing: antialiased;

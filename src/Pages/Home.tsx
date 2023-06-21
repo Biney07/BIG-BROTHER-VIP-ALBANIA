@@ -25,9 +25,9 @@ const Carousel3D = () => {
   }, []);
 
   return (
-    <>
+    <div style={{ maxWidth: '100%' }}>
 
-      <video playsInline autoPlay muted loop>
+      <video style={{ transform: 'scale(1.22)', maxWidth: '100%', }} playsInline autoPlay muted loop>
 
         <source src={myVideo} type="video/mp4" />
       </video>
@@ -58,17 +58,11 @@ const Carousel3D = () => {
 
 
       </div>
-      <div className="card">
-        <div className="glow"></div>
-        <div className="content">
-          <span>Glowing Card</span>
-          <span>Hover to see the effect</span>
-        </div>
-      </div>
+      
 
 
 
-    </>
+    </div>
 
   );
 };

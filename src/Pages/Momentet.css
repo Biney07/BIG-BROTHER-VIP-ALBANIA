@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Water+Brush&display=swap');
+
+.titleMomentet {
+    font-family: 'Water Brush', cursive;
+
+
+    margin-top: 100px;
+    font-size: 50px;
+    justify-content: center;
+    display: flex;
+    color: gold;
+
+
+}
+
+.row {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 30px;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+        align-content: center;
+        align-items: center !important;
+    }
+
+    .momentcard {
+        width: 100% !important;
+    }
+}.momentcard {
+    width: 30%;
+    background: rgb(32, 31, 20);
+    background: linear-gradient(318deg, rgba(32, 31, 20, 1) 5%, rgba(249, 206, 31, 1) 74%);
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 10px;
+    position: relative;
+    border: 2.5px solid gold;
+  }
+  
+  .imagetoptop{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imagetoptop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    z-index: 1;
+    animation: shine 2s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+
+.momentinput {
+    display: flex;
+    justify-content: center;
+    margin: -10px 0px 30px 0px;
+    border-color: var(--blue);
+
+}
+.card-text{
+    margin: 0px;
+    font-size: 15px;
+}
+
+.card-title {
+    font-size: 25px;
+    margin:0px 0px 5px  0px;
+}
+
+.momentinputborder {
+    border-color: var(--blue);
+    color: var(--blue);
+    width: 18%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    animation: pulse 1.5s infinite ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.ButtonLight {
+    background-color: var(--lightblue) !important;
+}
+
+.cardbody {
+    padding: 20px;
+}
+
+.popup {
+    position: fixed;
+    z-index: 1048;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(204, 204, 204, 0.301);
+    scroll-behavior: smooth;
+    overflow: auto;
+    transition: all 0.2s ease-in-out;
+
+    .view-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+    }
+
+    &__close-button {
+        position: absolute;
+        right: 0;
+        margin: 0px 20px 0px 16px;
+        background-color: rgb(212, 33, 33);
+        color: white;
+        border-radius: 0.3rem;
+        width: 24px;
+        height: 24px;
+    }
+
+    &__inner {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 70%;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+
+    &__card-grid {
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        input,
+        select,
+        option {
+            padding: 15px;
+            margin: 10px 0px;
+        }
+
+        button {
+            color: white;
+            height: 3rem;
+            font-weight: bolder;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #fff;
+            color: #00176a;
+            border: 1px solid #00176a;
+        }
+    }
+}
+
+.css-1clfhxa-MuiFormLabel-root-MuiInputLabel-root {
+    color: gold !important;
+}
+
+.css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root {
+    color: gold !important;
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    color: gold !important
+}
+
+.css-56g0t0-MuiFormLabel-root-MuiInputLabel-root {
+    color: gold !important
+}
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+    border-color: GOLD !important;
+}
+
+.css-nxo287-MuiInputBase-input-MuiOutlinedInput-input {
+    color: gold !important
+}

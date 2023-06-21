@@ -1,0 +1,176 @@
+/* Define custom property */
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --card-size: 22vw;
+    /* Use  single variable for both width and height */
+}
+
+.dancercontainer {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+
+.card {
+    background: #191c29;
+    width: var(--card-size);
+    height: var(--card-size);
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+  }
+
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-size) / 6);
+
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.9);
+  filter: blur(calc(var(--card-size) / 5));
+  background-image: linear-gradient(
+    var(--rotate),
+    #ffffff,
+    #ffffff 43%,
+    #ffffff
+  );
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate),
+      #5ddcff,
+      #3c67e3 43%,
+      #4e00c2
+    );
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+  }
+
+
+.card:hover {
+    box-shadow: none;
+    padding: 20px;
+    /* Remove normal state shadow on hover */
+}
+
+.card-title {
+    opacity: 0;
+    /* Hide the title by default */
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+    /* Display the title on hover */
+}
+
+.card-title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    font-size: 2.4rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 2;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+    /* Hide title on hover */
+}
+
+.card:hover .card-image-dancer {
+    opacity: 1;
+    /* Show image on hover */
+}
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--rotate), #dead0a, #d7e114 43%, #f3ff6a);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card:hover::before {
+    opacity: 1;
+    /* Show gradient on hover */
+}
+
+.card-image-dancer {
+    position: absolute;
+
+    width: 92.5%;
+    height: 91%;
+    background-image: url('./megi.jpg');
+    background-size: cover;
+    background-position: center center !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Hide image initially */
+    transition: opacity 0.5s;
+}
+
+
+.dancercontainer a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
